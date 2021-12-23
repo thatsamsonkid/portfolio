@@ -1,0 +1,34 @@
+# [START runtime]
+runtime: nodejs14
+inbound_services:
+  - warmup
+automatic_scaling:
+  min_idle_instances: 1
+  min_instances: 1
+
+handlers:
+  - url: /.*
+    secure: always
+    script: auto
+# [END runtime]
+# Routing for bundles to serve directly
+# - url: /(.*\.(gif|png|jpeg|jpg|css|js|ico|svg|txt|xml))$
+#   static_files: dist/homesmdva-ng/\1
+#   upload: dist/homesmdva-ng/(.*)
+
+# - url: /assets/fonts/(.*\.(eot|woff|woff2|svg|ttf))$
+#   static_files: dist/homesmdva-ng/assets/fonts/\1
+#   upload: dist/homesmdva-ng/assets/fonts/(.*)
+
+# # Any other requests are routed to index.html for react to handle so we don't need hash URLs
+# - url: /
+#   secure: always
+#   static_files: dist/homesmdva-ng/index.html
+#   upload: dist/homesmdva-ng/index.html
+#   redirect_http_response_code: 301
+
+# - url: /.*
+#   secure: always
+#   static_files: dist/homesmdva-ng/index.html
+#   upload: dist/homesmdva-ng/index.html
+#   redirect_http_response_code: 301

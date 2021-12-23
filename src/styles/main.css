@@ -1,0 +1,266 @@
+:root,
+html,
+body {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Utils */
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.sm-container {
+  max-width: 120rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 1rem;
+}
+
+/* Colors */
+:root {
+  --white: #ffff;
+  --royal-blue: #003365;
+  --black: black;
+  --light-blue: #3769e8;
+  /* --gray: #48648b; i like this blue */
+  --sky-blue: #71ddff;
+  --seafoam: #7bd9a7;
+  --salmon: #ff7373;
+  --gray: #6f747a;
+  --error-red: #dc143c;
+}
+
+/* Font weights */
+:root {
+  --light: 300;
+  --regular: 400;
+  --semi: 600;
+  --bold: 700;
+}
+
+/* Shadows */
+:root {
+  --shadow1: 5px 3px 20px 0px rgba(19, 14, 53, 0.2);
+}
+
+/* Color Utils */
+.text-green {
+  color: var(--seafoam);
+}
+
+.text-light-blue {
+  color: var(--light-blue);
+}
+
+.text-gray {
+  color: var(--gray);
+}
+
+.sm-body {
+  letter-spacing: 0.25px;
+  line-height: 1.7rem;
+  color: var(--royal-blue);
+  font-size: 1.4rem;
+}
+
+/* COntainer Override  */
+@media (min-width: 576px) {
+  .container {
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 100% !important;
+  }
+}
+
+/* Tabs */
+
+.sm-tabs__list {
+  display: flex;
+  flex-flow: row;
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  justify-content: center;
+}
+
+.sm-tab {
+  min-width: 12rem;
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  line-height: 13px;
+  color: var(--gray);
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+}
+
+.sm-tab.sm-tab--dark-blue {
+  color: var(--white);
+}
+
+.sm-tab.sm-tab--dark-blue.sm-tab--active::after {
+  background-color: var(--royal-blue) !important;
+}
+
+.sm-tab.sm-tab--active {
+  color: var(--royal-blue);
+}
+
+.sm-tab.sm-tab--active::after {
+  content: "";
+  position: absolute;
+  width: 0.2rem;
+  background-color: var(--seafoam);
+  height: 8rem;
+  transform: rotate(90deg);
+  left: 6rem;
+  top: -0.3rem;
+}
+
+/* Home Finder */
+.home-finder {
+  width: 280px;
+}
+
+.range-field {
+  border-radius: 1.4rem;
+  border: 1px solid var(--royal-blue);
+}
+
+.range-field--no-border {
+  border: none;
+}
+
+.hyphen {
+  width: 1.5rem;
+  border-bottom: 1px solid var(--gray);
+  position: absolute;
+  right: -0.6rem;
+}
+
+/* Heading  */
+.font-light {
+  font-weight: 300;
+}
+
+.sea-green {
+  color: var(--seafoam) !important;
+}
+
+.small-text {
+  font-size: 1rem;
+}
+
+.medium-text {
+  font-size: 1.4rem;
+  letter-spacing: 0.25px;
+  line-height: 2rem;
+}
+
+/* utils */
+.w-100 {
+  width: 100%;
+}
+
+.no-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.arrow {
+  border: solid var(--light-blue);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 0.4rem;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.slider-btn {
+  z-index: 10 !important;
+  width: 2.7rem !important;
+  height: 5.5rem !important;
+  border-radius: 0.3rem !important;
+  display: block !important;
+  background: var(--white) !important;
+}
+
+.slider-next-btn {
+  right: 0 !important;
+}
+
+.slider-prev-btn {
+  left: 0 !important;
+}
+
+.shadow-1 {
+  box-shadow: var(--shadow1);
+}
+
+/* Text Style */
+.sm-text {
+  font-size: 1rem;
+  letter-spacing: 0.25px;
+  line-height: 2rem;
+}
+
+@media (min-width: 768px) {
+  .sm-text {
+    font-size: 1.4rem;
+  }
+}
+
+.sm-overline {
+  color: var(--royal-blue);
+  font-size: 1.4rem;
+  font-weight: var(--bold);
+}
+
+.sm-subline {
+  color: var(--gray);
+  font-size: 1.2rem;
+  font-weight: var(--semi);
+}
