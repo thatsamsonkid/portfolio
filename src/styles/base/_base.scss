@@ -1,0 +1,52 @@
+html,
+body {
+    height: 100%;
+    font-family: $font-family;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+}
+
+p,
+a {
+    font-size: 1.2rem;
+
+    @include media-breakpoint-up(md) {
+        font-size: 1.4rem;
+    }
+}
+
+// Planned Override
+@include media-breakpoint-between(sm, lg) {
+    // .container {
+    //     max-width: 100%;
+    // }
+
+    // .site-v2 {
+    //     max-width: 72rem;
+    // }
+}
+
+// recaptcha hide badge by default
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+.grecaptcha-terms {
+    margin: 0 0 10px;
+
+    p,
+    a {
+        font-size: 1rem;
+    }
+
+    p {
+        color: $hip-black;
+    }
+
+    a {
+        color: $blue-jaunts;
+    }
+}

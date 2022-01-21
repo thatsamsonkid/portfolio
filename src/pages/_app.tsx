@@ -1,12 +1,11 @@
 import { AppProps } from "next/app";
-import "../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css";
-import "../../node_modules/bootstrap/dist/css/bootstrap-utilities.min.css";
-// import "../../node_modules/bootstrap/dist/css/bootstrap-reboot.css";
-import "../styles/main.css";
 import { ThemeProvider } from "styled-components";
+import MainPageLayout from "../shared/layouts/PageLayouts";
+
+// Style Imports
+import "../styles/main.scss";
 import { theme } from "../styles/theme";
 import { GlobalStyle } from "../styles/_styles";
-import MainPageLayout from "../shared/layouts/PageLayouts";
 
 function App({ Component, pageProps }: AppProps) {
   return (

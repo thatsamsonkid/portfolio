@@ -1,18 +1,24 @@
 import { createGlobalStyle } from "styled-components";
 import device from "../shared/utils/breakpoints";
-
 export const GlobalStyle = createGlobalStyle`
 
 :root {
-	--white: #ffff;
-	--royal-blue: #003365;
-	--black: black;
-	--light-blue: #3769e8;
-	/* --gray: #48648b; i like this blue */
-	--sky-blue: #71ddff;
-	--seafoam: #7bd9a7;
-	--salmon: #ff7373;
-	--gray: #6f747a;
+	--black: #303841;
+  --white: #ffffff;
+  --gray: #777777;
+
+  --blue-jaunts: #467dcd;
+  --light-purple-fax: #f1f1ff;
+  --hip-black: #303842;
+  --geeking-orange: #f9674e;
+
+  --red-mans: #e23d3d;
+  --yee-purple: #52489c;
+  --ardy-green: #1b998b;
+  --wilding-yellow: #eec643;
+  --ocean-blue: #81d3ca;
+
+  --shadow-black: #22282f;
 }
 
 html {
@@ -22,6 +28,10 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+body {
+	background-color: var(--black);
 }
 
 a{

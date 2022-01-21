@@ -1,3 +1,74 @@
+// Custom Bootstrap Imports
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "utilities";
+
+// Layout & components
+@import "root";
+// @import "reboot";
+// @import "type";
+@import "images";
+// @import "containers";
+@import "grid";
+// @import "tables";
+// @import "forms";
+// @import "buttons";
+// @import "transitions";
+// @import "dropdown";
+// @import "button-group";
+// @import "nav";
+// @import "navbar";
+// @import "card";
+// @import "accordion";
+// @import "breadcrumb";
+// @import "pagination";
+// @import "badge";
+// @import "alert";
+// @import "progress";
+// @import "list-group";
+// @import "close";
+// @import "toasts";
+// @import "modal";
+// @import "tooltip";
+// @import "popover";
+// @import "carousel";
+// @import "spinners";
+// @import "offcanvas";
+// @import "placeholders";
+
+// Helpers
+@import "helpers";
+
+// Utilities
+@import "utilities/api";
+
+// 1. Configuration and helpers
+@import "abstracts/variables", "abstracts/functions", "abstracts/mixins";
+
+// @import 'themes/material.scss';
+
+// 3. Base stuff
+@import "base/fonts", "base/base", "base/helpers", "base/typography",
+  "base/animations";
+
+// 4. Components
+// @import 'components/alerts', 'components/mat-tabs', 'components/carousel';
+
+// 5.Themes
+
+/* You can add global styles to this file, and also import other style files */
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 :root,
 html,
 body {
@@ -29,20 +100,6 @@ body {
   margin-right: auto;
   margin-left: auto;
   padding: 0 1rem;
-}
-
-/* Colors */
-:root {
-  --white: #ffff;
-  --royal-blue: #003365;
-  --black: black;
-  --light-blue: #3769e8;
-  /* --gray: #48648b; i like this blue */
-  --sky-blue: #71ddff;
-  --seafoam: #7bd9a7;
-  --salmon: #ff7373;
-  --gray: #6f747a;
-  --error-red: #dc143c;
 }
 
 /* Font weights */

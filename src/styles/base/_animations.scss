@@ -1,0 +1,152 @@
+.animate-reveal {
+    opacity: 0;
+    animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+
+    &-left {
+        animation: reveal-left 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+    }
+
+    &-right {
+        animation: reveal-right 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+    }
+
+    &-zoom {
+        animation: reveal-zoom 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+    }
+}
+
+.animate-instantly {
+    animation-delay: 0;
+}
+
+.animate-500 {
+    animation-delay: 500ms;
+}
+
+.animate-1000 {
+    animation-delay: 1s;
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+@keyframes reveal-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes reveal-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes reveal-zoom {
+    0% {
+        opacity: 0;
+        transform: scale(.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-visibility {
+    animation: fadeInOut 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+}
+
+.animate-fadeIn {
+    animation: fadeIn .3s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+}
+
+.animate-fadeOut {
+    animation: fadeOut 1.5s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+}
+
+.animate-float {
+    transform: translatey(0px);
+}
+
+.animate-infinite {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 100;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100;
+    }
+}
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.4);
+        transform: translatey(0px);
+    }
+
+    25% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translate(10, -5px);
+    }
+
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.1);
+        transform: translatey(-10px);
+    }
+
+    75% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.1);
+        transform: translate(-10, -5px);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.4);
+        transform: translate(0px);
+    }
+}
+
+.zoom-on-hover{
+    transition: transform .2s;
+    &:hover{
+        transform: scale(1.05);
+    }
+}

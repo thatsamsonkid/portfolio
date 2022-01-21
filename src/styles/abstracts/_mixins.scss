@@ -1,0 +1,94 @@
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+    $src: null;
+
+    $extmods: (eot: "?",
+            svg: "#"+ str-replace($name, " ", "_"));
+
+    $formats: (otf: "opentype",
+            ttf: "truetype"
+        );
+
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+
+// Font Mixin 
+@mixin font-fam() {
+    font-family: $font-family;
+}
+
+@mixin font-fam-code() {
+    font-family: $font-family-code;
+}
+
+@mixin font-bold() {
+    font-weight: 700;
+}
+
+@mixin font-light() {
+    font-weight: 300;
+}
+
+@mixin font-italic() {
+    font-style: italic;
+}
+
+@mixin text-underline() {
+    text-decoration: underline;
+}
+
+@mixin btn-disabled() {
+    background-color: $gray;
+    cursor: not-allowed;
+}
+
+@mixin btn-tertiary-disabled() {
+    color: $gray;
+    cursor: not-allowed;
+}
+
+@mixin no-list-style {
+    list-style-type: none;
+    ;
+}
+
+
+@mixin lit {
+    background: rgb(249, 103, 78);
+    background: linear-gradient(90deg, rgba(249, 103, 78, 1) 0%, rgba(226, 61, 61, 1) 100%);
+}
+
+@mixin gucci-bears {
+    background: rgb(48, 56, 66);
+    background: linear-gradient(90deg, rgba(48, 56, 66, 1) 0%, rgba(241, 241, 255, 1) 100%);
+}
+
+@mixin high-maintenance {
+    background: rgb(70, 125, 205);
+    background: linear-gradient(90deg, rgba(70, 125, 205, 1) 0%, rgba(27, 153, 139, 1) 100%);
+}
+
+@mixin sprite {
+    background: rgb(238, 198, 67);
+    background: linear-gradient(90deg, rgba(238, 198, 67, 1) 0%, rgba(27, 153, 139, 1) 100%);
+}
+
+@mixin i-stamp {
+    background: rgb(48, 56, 66);
+    background: linear-gradient(90deg, rgba(48, 56, 66, 1) 0%, rgba(226, 61, 61, 1) 34%, rgba(249, 103, 78, 1) 64%, rgba(238, 198, 67, 1) 100%);
+}
+
+@mixin gasp {
+    background: rgb(82, 72, 156);
+    background: linear-gradient(90deg, rgba(82, 72, 156, 1) 0%, rgba(70, 125, 205, 1) 32%, rgba(27, 153, 139, 1) 63%, rgba(241, 241, 255, 1) 100%);
+}

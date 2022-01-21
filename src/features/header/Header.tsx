@@ -1,67 +1,58 @@
-import React from "react";
-import Link from "next/link";
+import React, { useRef } from "react";
 import Image from "next/image";
 import styled from "styled-components";
+import siteLogoImg from "../../../public/images/SM-LOGO.png";
+import useScrollPosition from "@react-hook/window-scroll";
 
 const HeaderWrapper = styled.header`
   z-index: 10;
   width: 100%;
   color: white;
-  box-shadow: var(--shadow1);
+  height: 10.2rem;
+  transition: height 0.6s, transform 0.6s;
 
   .header-wrapper {
     max-width: 120rem;
   }
 
-  .site-logo-wrapper {
-    position: relative;
-
-    & > div {
-      position: unset !important;
-    }
+  .site-logo {
+    width: 8rem;
+    height: 8rem;
+    transition: all 0.6s;
   }
 
-  .custom-img {
-    object-fit: contain;
-    width: 7.2rem !important;
-    position: relative !important;
-    height: unset !important;
-  }
-
-  .site-logo img {
+  &.elevated {
+    box-shadow: var(--shadow1);
+    position: fixed;
+    top: 0;
     height: 6rem;
+
+    .site-logo {
+      width: 4rem;
+      height: 4rem;
+    }
   }
 `;
 
 function Header() {
+  const headerEl = useRef(null);
+  const scrollPosition = useScrollPosition();
+  let elevationClass = "";
+
+  const headerOffset =
+    headerEl && headerEl.current ? headerEl.current.offsetTop : 0;
+
+  if (scrollPosition > headerOffset) {
+    elevationClass = "elevated";
+  } else {
+    elevationClass = "";
+  }
+
   return (
-    <HeaderWrapper className="py-3 px-4">
-      <div className="header-wrapper d-flex mx-auto">
-        <div className="site-logo">
-          <Link href="/">
-            <a className="hidden-text">
-              Go to Home Page
-              <div className="site-logo-wrapper">
-                <img
-                  src="/images/am-logo-header.png"
-                  alt=""
-                  className="custom-img"
-                />
-              </div>
-            </a>
-          </Link>
-        </div>
-        <div className="ms-auto text-right">
-          <h1 className="sm-overline">Ahmed Mohamed</h1>
-          <a className="d-block sm-subline mb-0" href="tel:+(571)-278-0960">
-            (571)-278-0960
-          </a>
-          <a
-            className="d-block sm-subline mb-0"
-            href="mailto:homesmdva@gmail.com"
-          >
-            homesmdva@gmail.com
-          </a>
+    <HeaderWrapper ref={headerEl} className={`py-3 px-4 ${elevationClass}`}>
+      <div className="header-wrapper d-flex">
+        <div className="site-logo ms-auto position-relative">
+          <Image layout="fill" src={siteLogoImg} />
         </div>
       </div>
     </HeaderWrapper>

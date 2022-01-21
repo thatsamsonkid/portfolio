@@ -6,16 +6,37 @@ import getConfig from "next/config";
 import Footer from "../../features/footer/Footer";
 import Header from "../../features/header/Header";
 import EnvBanner from "../components/banner/Env-Banner";
+import useScrollPosition from "@react-hook/window-scroll";
+import { useRef } from "react";
 
 const { publicRuntimeConfig } = getConfig();
+
+const MainWrapper = styled.main`
+  &.elevated {
+    padding-top: 5rem;
+  }
+`;
 
 export default function MainPageLayout({ children }) {
   const envBanner = !publicRuntimeConfig.production && (
     <EnvBanner>Environment is: DEV</EnvBanner>
   );
 
+  const headerEl = useRef(null);
+
+  const headerOffset =
+    headerEl && headerEl.current ? headerEl.current.offsetTop : 0;
+
+  let stickyHeader = "";
+  const scrollPosition = useScrollPosition();
+  if (scrollPosition > headerOffset) {
+    stickyHeader = "elevated";
+  } else {
+    stickyHeader = "";
+  }
+
   return (
-    <div>
+    <>
       <Head>
         <title>Home</title>
         <meta
@@ -83,10 +104,9 @@ export default function MainPageLayout({ children }) {
         strategy="lazyOnload"
       />{" "}
       {envBanner}
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </div>
+      <Header></Header>
+      <MainWrapper className={`${stickyHeader}`}>{children}</MainWrapper>
+    </>
   );
 }
 
