@@ -1,52 +1,58 @@
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 html,
 body {
-    height: 100%;
-    font-family: $font-family;
-    font-size: 10px;
+  height: 100%;
+  font-family: $font-family;
+  font-size: 10px;
 }
 
 body {
-    margin: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p,
 a {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 
-    @include media-breakpoint-up(md) {
-        font-size: 1.4rem;
-    }
+  @include media-breakpoint-up(md) {
+    font-size: 1.4rem;
+  }
 }
 
 // Planned Override
-@include media-breakpoint-between(sm, lg) {
-    // .container {
-    //     max-width: 100%;
-    // }
-
-    // .site-v2 {
-    //     max-width: 72rem;
-    // }
-}
+// @include media-breakpoint-between(sm, lg) {
+// }
 
 // recaptcha hide badge by default
 .grecaptcha-badge {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .grecaptcha-terms {
-    margin: 0 0 10px;
+  margin: 0 0 10px;
 
-    p,
-    a {
-        font-size: 1rem;
-    }
+  p,
+  a {
+    font-size: 1rem;
+  }
 
-    p {
-        color: $hip-black;
-    }
+  p {
+    color: $hip-black;
+  }
 
-    a {
-        color: $blue-jaunts;
-    }
+  a {
+    color: $blue-jaunts;
+  }
 }
