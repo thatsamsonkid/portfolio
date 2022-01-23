@@ -4,6 +4,7 @@ import { PageContain } from "../shared/layouts/PageLayouts";
 import styled from "styled-components";
 import Navigation from "../shared/components/navigation/Navigation";
 import { device } from "@unbyte-io/react-fuego";
+import ContactForm from "../features/contact-form/Contact-Form";
 
 const MegaHeading = styled.h1`
   font-size: 3rem;
@@ -83,7 +84,9 @@ export default function Home() {
         <section id="professional"></section>
         <section id="projects"></section>
         <section id="skills"></section>
-        <section id="contact"></section>
+        <section id="contact">
+          <ContactForm></ContactForm>
+        </section>
       </PageWrapper>
     </>
   );

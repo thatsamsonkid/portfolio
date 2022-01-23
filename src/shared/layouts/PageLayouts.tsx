@@ -106,6 +106,7 @@ export default function MainPageLayout({ children }) {
       {envBanner}
       <Header></Header>
       <MainWrapper className={`${stickyHeader}`}>{children}</MainWrapper>
+      <Footer></Footer>
     </>
   );
 }
