@@ -1,0 +1,69 @@
+// Icons
+@font-face {
+  font-family: "sam-font";
+  src: url("/fonts/sam-font.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "sam-font" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "sam-font" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-about:before {
+  content: "\64";
+}
+
+.icon-contact:before {
+  content: "\65";
+}
+
+.icon-home:before {
+  content: "\61";
+}
+
+.icon-projects:before {
+  content: "\62";
+}
+
+.icon-skills:before {
+  content: "\63";
+}
+
+.icon-linkedin:before {
+  content: "\6c";
+}
+
+.icon-instagram:before {
+  content: "\69";
+}
+
+.icon-gitlab:before {
+  content: "\67";
+}
+
+.icon-img {
+  max-width: 30px;
+}

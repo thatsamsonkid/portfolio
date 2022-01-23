@@ -1,10 +1,10 @@
-const device = {
-  mobile: `(min-width: 575.98px) and (max-width: 768px)`,
-  mobileAndAbove: `(min-width: 575.98px)`,
-  tablet: `(min-width: 768px) and (max-width: 992px)`,
-  tabletAndAbove: `(min-width: 768px)`,
-  desktopAndAbove: `(min-width: 993px)`,
-  lgDesktopAndAbove: `(min-width: 1300px)`,
-};
+// const device = {
+//   mobile: `(min-width: 575.98px) and (max-width: 768px)`,
+//   mobileAndAbove: `(min-width: 575.98px)`,
+//   tablet: `(min-width: 768px) and (max-width: 992px)`,
+//   tabletAndAbove: `(min-width: 768px)`,
+//   desktopAndAbove: `(min-width: 993px)`,
+//   lgDesktopAndAbove: `(min-width: 1300px)`,
+// };
 
-export default device;
+// export default device;

@@ -22,7 +22,12 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
+  color: var(--white);
 	background-color: var(--black);
+}
+
+p,a {
+  color: var(--white);
 }
 
 `;

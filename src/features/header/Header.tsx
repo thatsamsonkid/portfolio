@@ -7,7 +7,8 @@ import useScrollPosition from "@react-hook/window-scroll";
 const HeaderWrapper = styled.header`
   z-index: 10;
   width: 100%;
-  color: white;
+  color: var(--white);
+  background-color: var(--black);
   height: 10.2rem;
   transition: height 0.6s, transform 0.6s;
 
