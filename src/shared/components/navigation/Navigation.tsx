@@ -12,17 +12,42 @@ const NavWrapper = styled.div`
   bottom: 10rem;
   z-index: 10;
 
+  &::before {
+    content: "";
+    opacity: 0;
+    width: 4.5rem;
+    height: 29rem;
+    position: absolute;
+    bottom: 3.5rem;
+    left: 0;
+    background-color: rgba(355, 355, 355, 0.9);
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    transition: opacity 0.4s;
+  }
+
   ${NavItemWrapper} {
     opacity: 0;
     transform-origin: 0 0;
     transform: translate(0, 3rem);
     transition: opacity 0.35s, transform 0.5s;
+
+    @media ${device.tabletAndAbove} {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
   }
 
   &.expanded {
     ${NavItemWrapper} {
-      opacity: 100;
+      opacity: 1;
       transform: translate(0, 0);
+    }
+
+    &::before {
+      opacity: 1;
     }
   }
 
@@ -50,7 +75,17 @@ const FAB = styled.button`
   border-radius: 3rem;
   border: none;
   z-index: 12;
+  opacity: 0.75;
   transform: translate(0, 4rem);
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  @media ${device.tabletAndAbove} {
+    display: none;
+  }
 `;
 
 const Navigation = () => {

@@ -7,7 +7,7 @@ import { Button, Field } from "@unbyte-io/react-fuego";
 import getConfig from "next/config";
 
 const { publicRuntimeConfig } = getConfig();
-const ContactFormWrapper = styled.section`
+const ContactFormWrapper = styled.div`
   padding-top: 5rem !important;
 
   .contact-form {
@@ -80,8 +80,7 @@ const ContactForm = () => {
   } = useForm({
     mode: "onChange",
     defaultValues: {
-      firstName: "",
-      lastName: "",
+      fullName: "",
       email: "",
       phoneNumber: "",
       request: "",
@@ -107,8 +106,7 @@ const ContactForm = () => {
         setShowSuccess(true);
         // reset form
         reset({
-          firstName: "",
-          lastName: "",
+          fullName: "",
           email: "",
           phoneNumber: "",
           request: "",
@@ -122,7 +120,7 @@ const ContactForm = () => {
   };
 
   return (
-    <ContactFormWrapper className="p-5 bckgrd-sea-green">
+    <ContactFormWrapper className="p-md-5 bckgrd-sea-green">
       <div className="contact-form--inner bckgrd-white mx-auto p-3 p-md-5 position-relative">
         <div
           className={`contact-form-loader position-absolute ${
@@ -178,38 +176,16 @@ const ContactForm = () => {
                   className="sm-form-field--square"
                   type="text"
                   required={true}
-                  {...register("firstName", {
-                    pattern: /[A-Za-z]{2}$/i,
+                  {...register("fullName", {
+                    pattern: /[A-Za-z]{4}$/i,
                   })}
                   errorLabel={
-                    errors.firstName?.type === "pattern" &&
-                    "First name is required"
+                    errors.fullName?.type === "pattern" &&
+                    "Full Name is required"
                   }
                 >
-                  First Name
+                  Full Name
                 </Field>
-              </div>
-              <div className="col-12 col-md-6">
-                <Field
-                  floatLabel={true}
-                  className="sm-form-field--square"
-                  type="text"
-                  required={true}
-                  {...register("lastName", {
-                    required: true,
-                    pattern: /[A-Za-z]{2}$/i,
-                  })}
-                  errorLabel={
-                    errors.lastName?.type === "required" &&
-                    "Last name is required"
-                  }
-                >
-                  Last Name
-                </Field>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-12 col-md-6">
                 <Field
                   floatLabel={true}
                   className="sm-form-field--square"
@@ -226,9 +202,6 @@ const ContactForm = () => {
                 >
                   Email
                 </Field>
-              </div>
-
-              <div className="col-12 col-md-6">
                 <Field
                   floatLabel={true}
                   className="sm-form-field--square"
@@ -246,10 +219,6 @@ const ContactForm = () => {
                 >
                   Phone Number
                 </Field>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col">
                 <Field
                   floatLabel={true}
                   className="sm-form-field--square"
@@ -266,6 +235,8 @@ const ContactForm = () => {
                   Note
                 </Field>
               </div>
+
+              <div className="col-12 col-md-6"></div>
             </div>
 
             <div className="contact-form-footer d-flex justify-content-between align-content-center">
@@ -285,7 +256,7 @@ const ContactForm = () => {
 
               <div className="d-flex flex-row-reverse">
                 <Button
-                  level="tertiary"
+                  level="secondary"
                   className="hmdva-button hmdva-button--primary"
                   disabled={!isDirty || !isValid}
                   type="submit"

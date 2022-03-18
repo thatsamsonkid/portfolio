@@ -35,10 +35,10 @@ export const theme = {
       accent: "",
     },
     secondary: {
-      bg: "#484848",
-      fg: "#fff",
-      hfg: "#212121",
-      hbg: "#fff",
+      bg: "#fff",
+      fg: "#000",
+      hfg: "#fff",
+      hbg: "#81d3ca",
       accent: "",
     },
     tertiary: {
@@ -55,12 +55,19 @@ export const theme = {
   },
   formField: {
     style: "outlineFloat",
-    labelbg: "",
-    inputbg: "",
-    outline: "#003365",
+    labelbg: "#303841",
+    inputbg: "#303841",
+    outline: "#fff",
     focusOutline: "#7bd9a7",
-    labelfg: "#003365",
+    labelfg: "#fff",
     errorfg: "",
+  },
+  tabs: {
+    bg: "transparent",
+    fg: "#81d3ca",
+    hfg: "#303841",
+    hbg: "#81d3ca",
+    accent: "#81d3ca",
   },
   breakpoints: {
     mobile: `(min-width: 575.98px) and (max-width: 768px)`,

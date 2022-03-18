@@ -30,4 +30,9 @@ p,a {
   color: var(--white);
 }
 
+.sm-tab{
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
 `;

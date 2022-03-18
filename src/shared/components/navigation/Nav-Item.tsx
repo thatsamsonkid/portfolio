@@ -4,7 +4,6 @@ import styled from "styled-components";
 export const NavItemWrapper = styled.div`
   width: 4.5rem;
   height: 4.5rem;
-  /* background-color: var(--ocean-blue); */
   text-align: center;
   display: flex;
   justify-content: center;
@@ -13,10 +12,10 @@ export const NavItemWrapper = styled.div`
 
   a {
     font-size: 2.5rem;
-    color: var(--white);
+    color: var(--black);
 
     &:hover {
-      color: var(--ocean-blue);
+      color: var(--blue-jaunts);
     }
   }
 `;
