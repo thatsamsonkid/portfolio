@@ -121,7 +121,7 @@ const ContactForm = () => {
 
   return (
     <ContactFormWrapper className="p-md-5 bckgrd-sea-green">
-      <div className="contact-form--inner bckgrd-white mx-auto p-3 p-md-5 position-relative">
+      <div className="contact-form--inner bckgrd-white mx-auto p-3 p-md-0 position-relative">
         <div
           className={`contact-form-loader position-absolute ${
             loading ? "loading" : null
@@ -232,11 +232,17 @@ const ContactForm = () => {
                     "Please tell us how we can help!"
                   }
                 >
-                  Note
+                  Questions &amp; Comments
                 </Field>
               </div>
 
-              <div className="col-12 col-md-6"></div>
+              <div className="col-12 col-md-6">
+                <img
+                  className="img-fluid"
+                  src="/images/SAM_1.svg"
+                  alt="Quetzal Flying over Pyramids"
+                />
+              </div>
             </div>
 
             <div className="contact-form-footer d-flex justify-content-between align-content-center">

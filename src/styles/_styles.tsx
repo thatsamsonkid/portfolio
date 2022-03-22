@@ -1,5 +1,5 @@
+import { device } from "@unbyte-io/react-fuego";
 import { createGlobalStyle } from "styled-components";
-import device from "../shared/utils/breakpoints";
 export const GlobalStyle = createGlobalStyle`
 
 :root {
@@ -35,4 +35,25 @@ p,a {
   font-weight: 600;
 }
 
+// TODO: Move to library
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill{
+    -webkit-text-fill-color: #fff !important;
+}
+
+p {
+  font-size: 1.6rem;
+
+  @media ${device.tabletAndAbove} {
+    font-size: 2rem;
+  }
+}
 `;

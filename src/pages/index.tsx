@@ -30,7 +30,7 @@ const JustADev = styled.p`
 `;
 
 const PageWrapper = styled.div`
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 `;
 

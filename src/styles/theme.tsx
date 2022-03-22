@@ -1,12 +1,12 @@
 export const theme = {
   name: "default",
-  backgroundColor: "#FFF",
+  backgroundColor: "#303841",
   palette: {
     primary: {
-      main: "#212121",
+      main: "#303841",
       light: "#484848",
-      dark: "#000000",
-      contrastText: "#000000",
+      dark: "#303841",
+      contrastText: "#fff",
     },
     secondary: {
       main: "#7000ad",
@@ -55,6 +55,7 @@ export const theme = {
   },
   formField: {
     style: "outlineFloat",
+    bg: "#303841",
     labelbg: "#303841",
     inputbg: "#303841",
     outline: "#fff",

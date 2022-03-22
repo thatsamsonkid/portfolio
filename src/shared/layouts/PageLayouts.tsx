@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import device from "../utils/breakpoints";
 import Head from "next/head";
 import Script from "next/script";
 import getConfig from "next/config";
@@ -8,6 +7,7 @@ import Header from "../../features/header/Header";
 import EnvBanner from "../components/banner/Env-Banner";
 import useScrollPosition from "@react-hook/window-scroll";
 import { useRef } from "react";
+import { device } from "@unbyte-io/react-fuego";
 
 const { publicRuntimeConfig } = getConfig();
 
