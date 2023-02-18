@@ -1,11 +1,12 @@
 {
-  "name": "sammymohamed-dotcom",
+  "name": "portfolio-next",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p $PORT",
+    "lint": "next lint",
     "deploy": "gcloud app deploy",
     "buildToProd": "npm run build && npm run deploy",
     "dockerInstance": "docker run -p 3000:3000 -e PORT=3000 homesmdva",
@@ -14,30 +15,27 @@
     "refreshDocker": "npm run deleteDocker && npm run createDockerImage"
   },
   "dependencies": {
-    "@react-hook/window-scroll": "^1.3.0",
-    "@react-three/fiber": "^7.0.24",
-    "@unbyte-io/react-fuego": "^0.1.51",
+    "@fuego-ui/react": "^1.0.1",
+    "@next/font": "13.1.6",
+    "@types/node": "18.14.0",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
     "axios": "^0.24.0",
-    "bootstrap": "^5.1.3",
-    "focus-trap-react": "^8.8.2",
-    "gray-matter": "^4.0.2",
-    "next": "^11.1.3",
-    "prop-types": "^15.7.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-hook-form": "^7.17.5",
-    "redux": "^4.1.1",
-    "redux-devtools-extension": "^2.13.9",
-    "remark": "^12.0.0",
-    "remark-html": "^12.0.0",
-    "sass": "^1.49.0",
-    "styled-components": "^5.3.3",
-    "three": "^0.136.0"
+    "daisyui": "^2.50.1",
+    "eslint": "8.34.0",
+    "eslint-config-next": "13.1.6",
+    "lodash.debounce": "^4.0.8",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-focus-lock": "^2.9.4",
+    "react-hook-form": "^7.43.1",
+    "react-select": "^5.7.0",
+    "typescript": "4.9.5"
   },
   "devDependencies": {
-    "@types/node": "^16.11.0",
-    "@types/react": "^17.0.30",
-    "babel-plugin-styled-components": "^1.13.3",
-    "typescript": "^4.4.4"
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
   }
 }
