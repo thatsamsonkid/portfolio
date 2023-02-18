@@ -53,7 +53,6 @@ const ContactFormWrapper = styled.div`
 
       .grecaptcha-terms {
         margin: 0 0 10px;
-
         p,
         a {
           line-height: 1.8rem;

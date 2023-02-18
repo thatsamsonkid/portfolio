@@ -12,8 +12,9 @@ import { device } from "@unbyte-io/react-fuego";
 const { publicRuntimeConfig } = getConfig();
 
 const MainWrapper = styled.main`
+  /* transition: all 1s; */
   &.elevated {
-    padding-top: 5rem;
+    padding-top: 10.5rem;
   }
 `;
 
@@ -29,11 +30,14 @@ export default function MainPageLayout({ children }) {
 
   let stickyHeader = "";
   const scrollPosition = useScrollPosition();
-  if (scrollPosition > headerOffset) {
+  console.log(scrollPosition);
+  console.log(headerOffset);
+  if (scrollPosition >= headerOffset) {
     stickyHeader = "elevated";
   } else {
     stickyHeader = "";
   }
+  console.log(stickyHeader);
 
   return (
     <>
@@ -104,7 +108,7 @@ export default function MainPageLayout({ children }) {
         strategy="lazyOnload"
       />{" "}
       {envBanner}
-      <Header></Header>
+      <Header headerEl={headerEl}></Header>
       <MainWrapper className={`${stickyHeader}`}>{children}</MainWrapper>
       <Footer></Footer>
     </>

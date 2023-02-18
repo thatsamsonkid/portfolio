@@ -35,8 +35,8 @@ const HeaderWrapper = styled.header`
   }
 `;
 
-function Header() {
-  const headerEl = useRef(null);
+function Header({ headerEl }) {
+  // const headerEl = useRef(null);
   const scrollPosition = useScrollPosition();
   let elevationClass = "";
 

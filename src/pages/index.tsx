@@ -1,4 +1,11 @@
-import { Button, TextImage, Field, Tabs, Tab, device } from "@unbyte-io/react-fuego";
+import {
+  Button,
+  TextImage,
+  Field,
+  Tabs,
+  Tab,
+  device,
+} from "@unbyte-io/react-fuego";
 import Header from "../features/header/Header";
 import { PageContain } from "../shared/layouts/PageLayouts";
 import styled from "styled-components";
@@ -52,6 +59,12 @@ const CustomList = styled.ul`
 
   li {
     padding: 0.25rem 0;
+  }
+`;
+
+const CustomTab = styled(Tab)`
+  && {
+    width: 24vw;
   }
 `;
 
@@ -109,7 +122,7 @@ export default function Home() {
               <div className="col-12">
                 <h1>Professional Experience</h1>
                 <Tabs scrollable={true}>
-                  <Tab label="Full-Time" className="WOOOO">
+                  <CustomTab label="Full-Time">
                     <TabContent>
                       <ExperienceCard className="experience-card mt-5">
                         <div className="experience-card__heading d-flex justify-content-center align-items-center">
@@ -128,19 +141,20 @@ export default function Home() {
                         <div className="experience-card__content">
                           <CustomList>
                             <li>
-                              Developing new sites and migrating existing sites to the
-                              AEM platform
+                              Developing new sites and migrating existing sites
+                              to the AEM platform
                             </li>
                             <li>
                               Created technical diagrams to aid visualization of
                               architecture and complex flows
                             </li>
                             <li>
-                              Developed web components and applications in Angular
+                              Developed web components and applications in
+                              Angular
                             </li>
                             <li>
-                              Co-lead Angular development efforts for Amtrak’s Style
-                              Guide and Component Library
+                              Co-lead Angular development efforts for Amtrak’s
+                              Style Guide and Component Library
                             </li>
                             <li>
                               Working on the new version of Amtrak’s $4 billion
@@ -150,13 +164,18 @@ export default function Home() {
                               Developed and provided support for several Amtrak
                               micro-sites
                             </li>
-                            <li> Debugged and upgraded existing applications</li>
                             <li>
-                              Provided development support for Amtrak’s Alexa App
+                              {" "}
+                              Debugged and upgraded existing applications
                             </li>
                             <li>
-                              Recommended and executed both design and performance
-                              improvements on various Amtrak applications
+                              Provided development support for Amtrak’s Alexa
+                              App
+                            </li>
+                            <li>
+                              Recommended and executed both design and
+                              performance improvements on various Amtrak
+                              applications
                             </li>
                             <li>
                               Worked closely with developers, UX designers, and
@@ -166,8 +185,8 @@ export default function Home() {
                         </div>
                       </ExperienceCard>
                     </TabContent>
-                  </Tab>
-                  <Tab label="Contractor">
+                  </CustomTab>
+                  <CustomTab label="Contractor">
                     <TabContent>
                       <ExperienceCard className="experience-card mt-5">
                         <div className="experience-card__heading d-flex justify-content-center align-items-center">
@@ -186,21 +205,22 @@ export default function Home() {
                         <div className="experience-card__content">
                           <CustomList>
                             <li>
-                              Lead development work to migrate brands sites in single
-                              mono-repo
+                              Lead development work to migrate brands sites in
+                              single mono-repo
                             </li>
                             <li>
-                              Lead development work to improve code base to pass Adobe
-                              Security testing and Cloud compatibility on Adobe Cloud.
+                              Lead development work to improve code base to pass
+                              Adobe Security testing and Cloud compatibility on
+                              Adobe Cloud.
                             </li>
                             <li>
-                              Created technical documents and process workflows to
-                              define Adobe Cloud development
+                              Created technical documents and process workflows
+                              to define Adobe Cloud development
                             </li>
                             <li>
-                              Developed several surveys to collect customer feedback
-                              and improve MyCooler experience for customers. (New
-                              Customer and Rewards Redemption)
+                              Developed several surveys to collect customer
+                              feedback and improve MyCooler experience for
+                              customers. (New Customer and Rewards Redemption)
                             </li>
                           </CustomList>
                         </div>
@@ -223,16 +243,16 @@ export default function Home() {
                         <div className="experience-card__content">
                           <CustomList>
                             <li>
-                              Lead development work to resolve over 20k ADA issues
-                              site wide to up hold ADA compliance in accordance to
-                              Canadian regulations
+                              Lead development work to resolve over 20k ADA
+                              issues site wide to up hold ADA compliance in
+                              accordance to Canadian regulations
                             </li>
                           </CustomList>
                         </div>
                       </ExperienceCard>
                     </TabContent>
-                  </Tab>
-                  <Tab label="Internship">
+                  </CustomTab>
+                  <CustomTab label="Internship">
                     <TabContent>
                       <ExperienceCard className="experience-card mt-5">
                         <div className="experience-card__heading d-flex justify-content-center align-items-center">
@@ -251,8 +271,8 @@ export default function Home() {
                         <div className="experience-card__content">
                           <CustomList>
                             <li>
-                              Developing new sites and migrating existing sites to the
-                              AEM platform
+                              Developing new sites and migrating existing sites
+                              to the AEM platform
                             </li>
                             <li>
                               Created technical diagrams to aid visualization of
@@ -262,10 +282,14 @@ export default function Home() {
                               Developed and provided support for several Amtrak
                               micro-sites
                             </li>
-                            <li> Debugged and upgraded existing applications</li>
                             <li>
-                              Recommended and executed both design and performance
-                              improvements on various Amtrak applications
+                              {" "}
+                              Debugged and upgraded existing applications
+                            </li>
+                            <li>
+                              Recommended and executed both design and
+                              performance improvements on various Amtrak
+                              applications
                             </li>
                             <li>
                               Worked closely with developers, UX designers, and
@@ -275,7 +299,7 @@ export default function Home() {
                         </div>
                       </ExperienceCard>
                     </TabContent>
-                  </Tab>
+                  </CustomTab>
                 </Tabs>
               </div>
             </div>
