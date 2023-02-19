@@ -29,7 +29,7 @@ function Header({ headerEl }: any) {
         elevated ? styles.elevated : ""
       }`}
     >
-      <div className="max-content-width d-flex">
+      <div className="max-content-width d-flex mx-auto">
         <Image
           className={`${styles["site-logo"]} ml-auto`}
           width={elevated ? 40 : 80}

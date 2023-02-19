@@ -1,9 +1,10 @@
 // "use client";
 
+import Image from "next/image";
 import ContactForm from "./features/contact-form/Contact-Form";
-
-// import { Tabs, TextImage } from "@fuego-ui/react";
-// import { Tabs, Tab } from "@fuego-ui/react/src/tabs";
+import AboutMe from "./content-sections/AboutMe";
+import Professional from "./content-sections/Professional";
+import Skills from "./content-sections/Skills";
 
 export default function Home() {
   return (
@@ -23,39 +24,17 @@ export default function Home() {
         {/* <Navigation></Navigation> */}
       </section>
 
-      <section id="about" className="max-content-width">
-        {/* <TextImage
-          className=""
-          img="/images/new-sammy.png"
-          imgAlt="Sammy Mohamed Portrait"
-          imgColClassName="text-center"
-        >
-          <p>Hi there,</p>
-          <p>
-            A little bit about me, I'm currently a Web Developer at Amtrak since
-            2016. My experience has largely consisted of developing
-            web-applications within AEM (Versions 6.2 - 6.4) working both in the
-            front-end and back-end of these applications. n AEM I have built new
-            applications and migrated existing web-apps from their previous
-            platform.
-          </p>
-          <p>
-            Lately, I have been working more within the Angular Framework. I am
-            building Angular applications and web-components for micro-frontends
-            both in my professional work and personal projects (such as this
-            very site.) I've also worked in Vue and enjoyed working in this
-            framework. Though my education largely focused on networking and
-            telecommunications, I have started to enjoy working in web
-            development with a passion for the front-end aspect of applications
-            rather than the back-end.
-          </p>
-          <p>
-            I definitely want to continue working within Angular and AEM, so
-            that I can further hone my knowledge and skills within these
-            technologies. I also have an interest in mobile app development,
-            specifically utilizing the Flutter framework.
-          </p>
-        </TextImage> */}
+      <section
+        id="about"
+        className="max-content-width mx-auto min-h-screen px-5"
+      >
+        <AboutMe></AboutMe>
+      </section>
+      <section
+        id="professional"
+        className="max-content-width mx-auto min-h-screen px-5"
+      >
+        <Professional></Professional>
       </section>
       {/* <section id="professional">
            <div className="container">
@@ -246,11 +225,37 @@ export default function Home() {
              </div>
            </div>
          </section> */}
-      <section id="professional"></section>
       <section id="projects"></section>
-      <section id="skills"></section>
-      <section id="contact" className="my-20">
-        <ContactForm></ContactForm>
+      <section
+        id="skills"
+        className="max-content-width mx-auto my-20 px-3 min-h-screen"
+      >
+        <Skills></Skills>
+      </section>
+      <section
+        id="contact"
+        className="max-content-width mx-auto mt-20 mb-40 px-3"
+      >
+        <div className="flex flex-col md:flex-row">
+          <div className="flex-1">
+            <h1 className="text-3xl md:text-5xl font-bold text-center mb-6">
+              Get In Touch!
+            </h1>
+            <ContactForm></ContactForm>
+          </div>
+
+          <div className="flex-1">
+            <div className="md:mt-12">
+              <Image
+                style={{ margin: "0 auto" }}
+                src="/images/SAM_1.svg"
+                width={364}
+                height={186}
+                alt="Quetzal Bird Flying over the the Pyramids of Egypt illustrated to refer to Sammy's background"
+              ></Image>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );

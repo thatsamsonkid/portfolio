@@ -4,8 +4,7 @@
 }
 
 .elevated {
-  box-shadow: var(--shadow1);
-  position: fixed;
+  @apply shadow-sm fixed;
   top: 0;
   height: 60px;
 }

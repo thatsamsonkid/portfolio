@@ -7,3 +7,34 @@
 .max-content-width {
   max-width: 1200px;
 }
+
+.circle-display {
+  border: 1px solid var(--blue);
+  width: 125px;
+  height: 125px;
+  border-radius: 1000px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-flow: column;
+  padding: 15px;
+  box-shadow: 4px 8px 10px 0.5px #22282f;
+}
+
+.circle-display.circle--primary {
+  @apply bg-hip-black text-ocean-blue border-2 border-ocean-blue border-solid;
+}
+
+.circle-display.circle--primary .circle-display__description,
+.circle-display.circle--secondary .circle-display__description {
+  @apply text-gray italic text-xs;
+}
+
+.circle-display.circle--secondary {
+  @apply bg-ocean-blue text-hip-black border-2;
+}
