@@ -1,0 +1,11 @@
+.global-header {
+  height: 102px;
+  transition: height 0.6s, transform 0.6s;
+}
+
+.elevated {
+  box-shadow: var(--shadow1);
+  position: fixed;
+  top: 0;
+  height: 60px;
+}

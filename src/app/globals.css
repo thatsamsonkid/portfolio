@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "../../node_modules/@fuego-ui/react/index.css";
+
+.max-content-width {
+  max-width: 1200px;
+}
