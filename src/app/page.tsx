@@ -1,8 +1,8 @@
-"use client";
+// "use client";
 
-import { Tabs, TextImage } from "@fuego-ui/react";
+// import { Tabs, TextImage } from "@fuego-ui/react";
 // import { Tabs, Tab } from "@fuego-ui/react/src/tabs";
-import ContactForm from "./features/contact-form/Contact-Form";
+// import ContactForm from "./features/contact-form/Contact-Form";
 
 export default function Home() {
   return (
@@ -244,9 +244,7 @@ export default function Home() {
       <section id="professional"></section>
       <section id="projects"></section>
       <section id="skills"></section>
-      <section id="contact">
-        <ContactForm></ContactForm>
-      </section>
+      <section id="contact">{/* <ContactForm></ContactForm> */}</section>
     </main>
   );
 }

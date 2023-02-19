@@ -11,10 +11,6 @@ const nextConfig = {
     production: process.env.PROD,
     apiGateway: process.env.PROD ? "" : "",
   },
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
 };
 
 module.exports = nextConfig;
