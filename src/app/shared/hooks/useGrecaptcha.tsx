@@ -1,15 +1,15 @@
 import React, { useState, useCallback } from "react";
 
-declare const grecaptcha;
+declare const grecaptcha: any;
 
-export const useGrecaptcha = (siteKey) => {
+export const useGrecaptcha = (siteKey: any) => {
   const [grcsiteKey, setGRCSiteKey] = useState(siteKey || "");
   const [grcaction, setGRCAction] = useState("");
   const [grcReady, setGRCReady] = useState(false);
 
-  const setUserAction = useCallback((action) => setGRCAction(action), []);
+  const setUserAction = useCallback((action: any) => setGRCAction(action), []);
 
-  const onGrecaptchaError = (err) => {
+  const onGrecaptchaError = (err: any) => {
     throw Error(err);
   };
 
@@ -23,7 +23,7 @@ export const useGrecaptcha = (siteKey) => {
         })
         .then(executeFN)
         .catch(
-          (err) =>
+          (err: any) =>
             (onErrorCallback && onErrorCallback(err)) || onGrecaptchaError(err)
         );
     });

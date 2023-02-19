@@ -11,8 +11,11 @@ function useWindowSize() {
     // Handler to call on window resize
     function handleResize() {
       // Set window width/height to state
+
       setWindowSize({
+        // @ts-ignore
         width: window.innerWidth,
+        // @ts-ignore
         height: window.innerHeight,
       });
     }
