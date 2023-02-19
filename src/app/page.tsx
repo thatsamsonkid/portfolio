@@ -1,23 +1,28 @@
 // "use client";
 
+import ContactForm from "./features/contact-form/Contact-Form";
+
 // import { Tabs, TextImage } from "@fuego-ui/react";
 // import { Tabs, Tab } from "@fuego-ui/react/src/tabs";
-// import ContactForm from "./features/contact-form/Contact-Form";
 
 export default function Home() {
   return (
     <main>
       <section
-        className="max-content-width d-flex flex-column justify-content-center align-items-center"
+        className="flex flex-col content-center items-center min-h-screen"
         id="home"
-        style={{ minHeight: "calc(100vh - 102px)" }}
       >
-        <div style={{ paddingBottom: "15rem" }}>
-          <h1>Sammy Mohamed</h1>
-          <p>Just a Dev</p>
+        <div className="pb-40 mt-40">
+          <h1 className="mt-0 text-3xl leading-7 tracking-wide text-center text-white md:text-6xl md:tracking-widest">
+            Sammy Mohamed
+          </h1>
+          <p className="mt-0 text-3xl italic tracking-wide text-center text-ocean-blue">
+            Just a Dev
+          </p>
         </div>
         {/* <Navigation></Navigation> */}
       </section>
+
       <section id="about" className="max-content-width">
         {/* <TextImage
           className=""
@@ -244,7 +249,9 @@ export default function Home() {
       <section id="professional"></section>
       <section id="projects"></section>
       <section id="skills"></section>
-      <section id="contact">{/* <ContactForm></ContactForm> */}</section>
+      <section id="contact" className="my-20">
+        <ContactForm></ContactForm>
+      </section>
     </main>
   );
 }

@@ -36,7 +36,7 @@ function Header({ headerEl }: any) {
           height={elevated ? 40 : 80}
           src="/images/SM-LOGO.png"
           alt="Site Logo"
-          style={{ transition: `${elevated ? "all 0.4s" : "all 0.8s"}` }}
+          style={{ transition: `${elevated ? "all 0.2s" : "all 0.6s"}` }}
         />
       </div>
     </header>
