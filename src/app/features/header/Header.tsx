@@ -25,7 +25,7 @@ function Header({ headerEl }: any) {
       ref={headerEl}
       className={`${
         styles["global-header"]
-      } w-full z-10 text-white bg-black py-3 px-4 ${
+      } w-full z-10 text-white bg-base-100 opacity-100 py-3 px-4 ${
         elevated ? styles.elevated : ""
       }`}
     >

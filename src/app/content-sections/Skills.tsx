@@ -29,7 +29,11 @@ const Skills = () => {
       <ul className="list-none flex p-0 justify-evenly flex-wrap mb-7 gap-10">
         {skills.map((skill, i) => {
           return (
-            <li className="flex justify-center" style={{ flex: "0 1 150px" }}>
+            <li
+              key={skill.title}
+              className="flex justify-center"
+              style={{ flex: "0 1 150px" }}
+            >
               <Circle
                 key={skill.title}
                 className={
