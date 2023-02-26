@@ -68,7 +68,7 @@ const ContactForm = () => {
         required={true}
         className="input-bordered"
         {...register("fullName", {
-          pattern: /[A-Za-z]{4}$/i,
+          pattern: /[A-Za-z]{3}$/i,
         })}
         fieldErrors={errors.fullName ? true : false}
         errorLabel={errors.fullName && "Please let me know what to call you!"}

@@ -5,6 +5,7 @@ import ContactForm from "./features/contact-form/Contact-Form";
 import AboutMe from "./content-sections/AboutMe";
 import Professional from "./content-sections/Professional";
 import Skills from "./content-sections/Skills";
+import Navigation from "./shared/components/navigation/Navigation";
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
             Just a Dev
           </p>
         </div>
-        {/* <Navigation></Navigation> */}
+        <Navigation></Navigation>
       </section>
 
       <section
