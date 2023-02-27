@@ -31,27 +31,46 @@ const Navigation = () => {
         expanded ? `expanded ${styles.expanded}` : ""
       } ${bottomReached ? styles.bottomBuffer : ""}`}
     >
-      <ul className={`${styles.menuItems}`}>
-        <li>
-          <NavItem type="home" link="#home"></NavItem>
+      <ul
+        className={`${styles.menuItems}`}
+        id="menu"
+        role="menu"
+        aria-labelledby="menubutton"
+      >
+        <li role="presentation">
+          <NavItem type="home" link="#home">
+            Back to Top
+          </NavItem>
         </li>
-        <li>
-          <NavItem type="about" link="#home"></NavItem>
+        <li role="presentation">
+          <NavItem type="about" link="#about">
+            To about section
+          </NavItem>
         </li>
-        <li>
-          <NavItem type="projects" link="#home"></NavItem>
+        <li role="presentation">
+          <NavItem type="projects" link="#professional">
+            To professional section
+          </NavItem>
         </li>
-        <li>
-          <NavItem type="skills" link="#home"></NavItem>
+        <li role="presentation">
+          <NavItem type="skills" link="#skills">
+            To skills section
+          </NavItem>
         </li>
-        <li>
-          <NavItem type="contact" link="#home"></NavItem>
+        <li role="presentation">
+          <NavItem type="contact" link="#contact">
+            To contact section
+          </NavItem>
         </li>
       </ul>
       <div className="hidden md:flex w-[45px] h-[45px] min-h-[45px] justify-center items-center">
         <div className="w-[2px] h-[12px] bg-ocean-blue"></div>
       </div>
       <button
+        title="Menu Button"
+        id="menubutton"
+        aria-haspopup="true"
+        aria-controls="menu"
         className="btn w-[45px] h-[45px] min-h-[45px] rounded-full border-0 z-20 opacity-75 hover:focus:opacity-100 md:hidden"
         onClick={() => toggleNav()}
       >

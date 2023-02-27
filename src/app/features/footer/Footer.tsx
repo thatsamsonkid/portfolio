@@ -29,16 +29,19 @@ function Footer() {
                 href="https://www.linkedin.com/in/sammymohamed12/"
               >
                 <FontAwesomeIcon icon={faLinkedinIn} />
+                <span className="sr-only">LinkedIn Profile</span>
               </a>
             </div>
             <div className="min-w-[25px] min-h-[25px]">
               <a href="https://github.com/thatsamsonkid">
                 <FontAwesomeIcon icon={faGithub} />
+                <span className="sr-only">Github Profile</span>
               </a>
             </div>
             <div className="min-w-[25px] min-h-[25px]">
               <a href="https://twitter.com/SammyMohamed_">
                 <FontAwesomeIcon icon={faTwitter} />
+                <span className="sr-only">Twitter Profile</span>
               </a>
             </div>
           </div>
