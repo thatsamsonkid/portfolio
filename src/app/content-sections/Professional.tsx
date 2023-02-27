@@ -45,33 +45,19 @@ const Professional = () => {
               standards
             </li>
             <li>
-              Developing new sites and migrating existing sites to the AEM
-              platform
-            </li>
-            <li>
               Created technical diagrams to aid visualization of architecture
               and complex flows
             </li>
-            <li>Developed web components and applications in Angular</li>
             <li>
               Co-lead Angular development efforts for Amtrak’s Style Guide and
               Component Library
             </li>
             <li>
-              Working on the new version of Amtrak’s $4 billion booking site
-            </li>
-            <li>
               Developed and provided support for several Amtrak micro-sites
             </li>
-            <li>Debugged and upgraded existing applications</li>
-            <li>Provided development support for Amtrak’s Alexa App</li>
             <li>
               Recommended and executed both design and performance improvements
               on various Amtrak applications
-            </li>
-            <li>
-              Worked closely with developers, UX designers, and stakeholders to
-              accomplish project goals
             </li>
           </ul>
         </Tab>

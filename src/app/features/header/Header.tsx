@@ -31,7 +31,7 @@ function Header({ headerEl }: any) {
     >
       <div className="max-content-width d-flex mx-auto">
         <Image
-          className={`${styles["site-logo"]} ml-auto`}
+          className={`${styles["site-logo"]} ml-auto z-20`}
           width={elevated ? 40 : 80}
           height={elevated ? 40 : 80}
           src="/images/SM-LOGO.png"

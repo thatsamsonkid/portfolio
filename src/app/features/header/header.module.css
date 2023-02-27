@@ -3,6 +3,49 @@
   transition: height 0.4s, transform 0.4s;
 }
 
+.global-header.elevated::before,
+.global-header.elevated::after {
+  @apply hidden md:block;
+}
+
+.global-header.elevated::before {
+  opacity: 1;
+  z-index: 1;
+  height: 102px;
+}
+.global-header.elevated::after {
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 3s;
+}
+
+.global-header::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 0px;
+  background-color: hsl(var(--a));
+  transition: transform 0.4s, opacity 0.4s, height 0.6s;
+  position: absolute;
+  right: 35px;
+  top: 61px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.global-header::after {
+  content: "Just a Dev";
+  display: block;
+  transform: rotate(90deg);
+  height: 100px;
+  transition: transform 0.4s, opacity 0.4s;
+  position: absolute;
+  right: 35px;
+  top: 160px;
+  opacity: 0;
+  z-index: -1;
+}
+
 .elevated {
   @apply shadow-lg fixed;
   top: 0;

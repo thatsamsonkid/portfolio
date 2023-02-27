@@ -46,13 +46,11 @@
 
 .hamburgler {
   position: absolute;
-  /* top: 50%; */
   right: 0;
   left: 0;
   display: block;
   width: 25px;
   height: 25px;
-  /* margin: -30px auto 0 auto; */
   cursor: pointer;
   position: relative;
 }
@@ -62,7 +60,7 @@
   top: 0;
   width: 25px;
   height: 4px;
-  background-color: #fff;
+  background-color: hsl(var(--a));
   margin-bottom: 6px;
   transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width,
     0.3s ease right;

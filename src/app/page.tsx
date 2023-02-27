@@ -27,20 +27,20 @@ export default function Home() {
 
       <section
         id="about"
-        className="max-content-width mx-auto min-h-screen px-5 mb-20"
+        className="max-content-width mx-auto min-h-screen px-5 md:px-12 mb-20"
       >
         <AboutMe></AboutMe>
       </section>
       <section
         id="professional"
-        className="max-content-width mx-auto min-h-screen px-5"
+        className="max-content-width mx-auto min-h-screen px-5 md:px-12"
       >
         <Professional></Professional>
       </section>
       <section id="projects"></section>
       <section
         id="skills"
-        className="max-content-width mx-auto my-20 px-3 min-h-screen"
+        className="max-content-width mx-auto my-20 min-h-screen px-5 md:px-12"
       >
         <Skills></Skills>
       </section>
