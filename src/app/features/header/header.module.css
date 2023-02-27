@@ -21,7 +21,6 @@
 
 .global-header::before {
   content: "";
-  display: block;
   width: 1px;
   height: 0px;
   background-color: hsl(var(--a));
@@ -35,13 +34,11 @@
 
 .global-header::after {
   content: "Just a Dev";
-  display: block;
   transform: rotate(90deg);
-  height: 100px;
   transition: transform 0.4s, opacity 0.4s;
   position: absolute;
-  right: 35px;
-  top: 160px;
+  right: -3px;
+  top: 200px;
   opacity: 0;
   z-index: -1;
 }

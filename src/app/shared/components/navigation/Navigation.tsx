@@ -13,7 +13,7 @@ const Navigation = () => {
   useEffect(() => {
     const clientHeight =
       document.documentElement.clientHeight || window.innerHeight;
-    const footerBuffer = 50;
+    const footerBuffer = 117;
     if (scrollY + footerBuffer + clientHeight >= document.body.clientHeight) {
       setBottomReached(true);
     } else {
