@@ -3,8 +3,8 @@
   transition: height 0.4s, transform 0.4s;
 }
 
-.global-header.elevated::before,
-.global-header.elevated::after {
+.global-header::before,
+.global-header::after {
   @apply hidden md:block;
 }
 
