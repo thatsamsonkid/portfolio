@@ -53,7 +53,7 @@ export default function Home() {
             <h1 className="text-3xl md:text-5xl font-bold text-center mb-6">
               Get In Touch!
             </h1>
-            <ContactForm></ContactForm>
+            {/* <ContactForm></ContactForm> */}
           </div>
 
           <div className="flex-1">
