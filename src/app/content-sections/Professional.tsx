@@ -10,7 +10,7 @@ const Professional = () => {
         Professional Experience
       </h1>
       <Tabs fullWidth={true}>
-        <Tab label="Full Time">
+        <Tab className="tab-lg" label="Full Time">
           <h2 className="mb-1">
             Amtrak –{" "}
             <span className="text-ocean-blue italic">
@@ -61,7 +61,7 @@ const Professional = () => {
             </li>
           </ul>
         </Tab>
-        <Tab label="Contractor">
+        <Tab className="tab-lg" label="Contractor">
           <div className="mb-6">
             <h2 className="mb-1">
               Anheuser-Busch InBev –{" "}

@@ -23,7 +23,7 @@ function Footer() {
             </p>
           </div>
           <div className="flex max-h-[25px] justify-center items-center gap-5">
-            <div className="min-w-[25px] min-h-[25px]">
+            <div className="w-[25px] max-w-[25px]">
               <a
                 className="link link-hover"
                 href="https://www.linkedin.com/in/sammymohamed12/"
@@ -32,13 +32,13 @@ function Footer() {
                 <span className="sr-only">LinkedIn Profile</span>
               </a>
             </div>
-            <div className="min-w-[25px] min-h-[25px]">
+            <div className="w-[25px] max-w-[25px]">
               <a href="https://github.com/thatsamsonkid">
                 <FontAwesomeIcon icon={faGithub} />
                 <span className="sr-only">Github Profile</span>
               </a>
             </div>
-            <div className="min-w-[25px] min-h-[25px]">
+            <div className="w-[25px] max-w-[25px]">
               <a href="https://twitter.com/SammyMohamed_">
                 <FontAwesomeIcon icon={faTwitter} />
                 <span className="sr-only">Twitter Profile</span>

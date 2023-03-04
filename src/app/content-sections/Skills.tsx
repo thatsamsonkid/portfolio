@@ -31,8 +31,8 @@ const Skills = () => {
           return (
             <li
               key={skill.title}
-              className="flex justify-center"
-              style={{ flex: "0 1 150px" }}
+              className="flex justify-center md:flex-shrink-0 flex-shrink-1 md:flex-grow flex-grow-0 basis-[110px] md:basis-[150px]"
+              // style={{ flex: "0 1 150px" }}
             >
               <Circle
                 key={skill.title}
